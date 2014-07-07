@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src='jquery-2.1.1.min.js'></script>
+<script src='jquery.cookie.js'></script>
+<script src='nikki_insert.js'></script>
+<title>日記入力</title>
+</head>
+<body>
+	<div id='head_content' style='width:100%'>
+		<h1>日記入力</h1>
+	</div>
+	<div id='menu_content' style='margin-top:10px; width:100%'>
+		<ul style='list-style: none;display: inline;background-color: "#000333";width:100%'>
+			<a href='#'><li style='float:left;display:block; padding:0 5px; background:#060; color:#fff; line-height:20px; border-bottom:solid 1px #030;width:23%;text-align: center;'>日記入力</li></a>
+			<a href='nikki_ichiran.html'><li style='float:left;display:block; padding:0 5px; background:#060; color:#fff; line-height:20px; border-bottom:solid 1px #030;width:23%;text-align: center;'>日記一覧</li></a>
+			<a href='nikki_edit.html'><li style='float:left;display:block; padding:0 5px; background:#060; color:#fff; line-height:20px; border-bottom:solid 1px #030;width:23%;text-align: center;'>日記編集</li></a>
+			<a href='nikki_read.html'><li style='float:left;display:block; padding:0 5px; background:#060; color:#fff; line-height:20px; border-bottom:solid 1px #030;width:23%;text-align: center;'>日記閲覧</li></a>
+		</ul>
+	</div>
+	<div id='middle_content' style='width:100%;margin-top: 50px;'>
+		<h2>日付</h2><br />
+		<label id='inputYMD'></label><br />
+		<input type='hidden' id='inputYMDHM' value='' />
+		<h2>表題</h2><br />
+		<input type='text' id='inputTitle' value='' placeholder='題目を入れて下さい。' /><br />
+		<h2>内容</h2>
+		<textarea id='inputContent' rows='10' cols='20' placeholder='日記の内容を入力して下さい。'></textarea>
+	</div>
+	<div id='tail_content'>
+		<input type='button' value='登録' id='content_insertBtn' onclick='content_insert()' />
+		<input type='button' value='クリア' id='content_clearBtn' onclick='content_clear()' />
+		<input type='button' value='入力終了' id='content_insertEndBtn' onclick='content_insertEnd()' />
+	</div>
+	<div>
+		<a href='nikki.zip'>全ソース</a><br />
+		<label>このアプリはMITライセンスで公開しております。改変時はhiro.matsuno at gmail.comにご連絡下さい。atは書き換えてくださいね。</label><br />
+		<a href='http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license'>MITライセンスの全文（日本語訳）</a>
+	</div>
+
+</body>
+</html>
